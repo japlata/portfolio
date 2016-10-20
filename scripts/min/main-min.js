@@ -1,0 +1,1 @@
+!function(){"use strict";var t=angular.module("MainCtrl",[]);t.controller("MainCtrl",["$scope","$route",function(t,r){t.$route=r}]),t.controller("ProjectCtrl",["$scope","$http",function(t,r){return t.projects=[],r.get("/scripts/projects.json").then(function(r){return t.projects=r.data})}])}();

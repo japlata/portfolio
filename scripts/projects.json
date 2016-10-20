@@ -1,0 +1,97 @@
+[
+  {
+    "id": "asteroids",
+    "number": "01",
+    "name": "Asteroids",
+    "role": "Web Design | UX/UI | Photography",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aspernatur excepturi odio, nobis, rerum minima laborum harum obcaecati qui hic omnis quod recusandae sunt, error. Beatae perferendis, labore officiis commodi.",
+    "cover": "assets/imgs/spain.jpg",
+    "date": "2015",
+    "images": [
+      {
+        "url": "assets/imgs/image1.jpg"
+      },
+      {
+        "url": "assets/imgs/image2.jpg"
+      },
+      {
+        "url": "assets/imgs/image3.jpg"
+      }]
+  },
+  {
+    "id": "telescopes",
+    "number": "02",
+    "name": "The Glossary of Telescopes",
+    "role": "Web Design | Development | UX/UI",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aspernatur excepturi odio, nobis, rerum minima laborum harum obcaecati qui hic omnis quod recusandae sunt, error. Beatae perferendis, labore officiis commodi.",
+    "cover": "assets/imgs/spain.jpg",
+    "date": "2016",
+    "images": [
+      {
+        "url": "assets/imgs/image1.jpg"
+      },
+      {
+        "url": "assets/imgs/image2.jpg"
+      },
+      {
+        "url": "assets/imgs/image3.jpg"
+      }]
+    },
+    {
+      "id": "comment",
+      "number": "03",
+      "name": "Comment On The Importance Of Human Life",
+      "role": "Web Design | Photography | Development",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aspernatur excepturi odio, nobis, rerum minima laborum harum obcaecati qui hic omnis quod recusandae sunt, error. Beatae perferendis, labore officiis commodi.",
+      "cover": "assets/imgs/spain.jpg",
+      "date": "2016",
+      "images": [
+        {
+          "url": "assets/imgs/image1.jpg"
+        },
+        {
+          "url": "assets/imgs/image2.jpg"
+        },
+        {
+          "url": "assets/imgs/image3.jpg"
+        }]
+      },
+      {
+        "id": "otherproject",
+        "number": "05",
+        "name": "The Universal Misusage of Things",
+        "role": "Web Design | Photography | Development",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aspernatur excepturi odio, nobis, rerum minima laborum harum obcaecati qui hic omnis quod recusandae sunt, error. Beatae perferendis, labore officiis commodi.",
+        "cover": "assets/imgs/spain.jpg",
+        "date": "2016",
+        "images": [
+          {
+            "url": "assets/imgs/image1.jpg"
+          },
+          {
+            "url": "assets/imgs/image2.jpg"
+          },
+          {
+            "url": "assets/imgs/image3.jpg"
+          }]
+        },
+      {
+        "id": "ANOTHERONE",
+        "number": "05",
+        "name": "We're Almost Done!",
+        "role": "Web Design | Photography | Development",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aspernatur excepturi odio, nobis, rerum minima laborum harum obcaecati qui hic omnis quod recusandae sunt, error. Beatae perferendis, labore officiis commodi.",
+        "cover": "assets/imgs/spain.jpg",
+        "date": "2016",
+        "images": [
+          {
+            "url": "assets/imgs/image1.jpg"
+          },
+          {
+            "url": "assets/imgs/image2.jpg"
+          },
+          {
+            "url": "assets/imgs/image3.jpg"
+          }]
+        }
+      ]

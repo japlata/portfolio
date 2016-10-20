@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+display|Montserrat')
+
+$main-font: 'Playfair Display', serif
+$sub-font: 'Montserrat', sans-serif
+$blue: #002E63
+$pink: #FE667B
+$gray: #C0C2CE
+
+// CSS RESET //
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+  -webkit-font-smoothing: antialiased
+
+/* HTML5 display-role reset for older browsers
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+// END OF CSS RESET //
+
+// #top,
+// #bottom,
+// #left,
+// #right
+//   position: fixed
+//   padding: 8px
+//   border: 1px solid $blue
+//   z-index: 999
+
+#left,
+#right
+  top: 0
+  bottom: 0
+  width: 1px
+  z-index: 999
+
+#left
+  left: 0
+  position: fixed
+  padding: 3px
+  // border-right: 1px solid rgba(0,46,99,0.2)
+  background-color: white
+  background-image: linear-gradient(to bottom, $blue, $pink)
+  background-image: -moz-linear-gradient(to bottom, $blue, $pink)
+  background-image: -webkit-linear-gradient(to bottom, $blue, $pink)
+  background-image: -o-linear-gradient(to bottom, $blue, $pink)
+
+#right
+  right: 0
+  position: fixed
+  padding: 3px
+  // border-left: 1px solid rgba(0,46,99,0.2)
+  background-color: white
+  background-image: linear-gradient(to top, $blue, $pink)
+  background-image: -moz-linear-gradient(to top, $blue, $pink)
+  background-image: -webkit-linear-gradient(to top, $blue, $pink)
+  background-image: -o-linear-gradient(to top, $blue, $pink)
+
+#top,
+#bottom
+  left: 0
+  right: 0
+  height: 1px
+  z-index: 998
+
+#top
+  top: 0
+  position: fixed
+  padding: 3px
+  // border-bottom: 1px solid rgba(0,46,99,0.2)
+  background-color: white
+  background-image: linear-gradient(to right, $blue, $pink)
+  background-image: -moz-linear-gradient(to right, $blue, $pink)
+  background-image: -webkit-linear-gradient(to right, $blue, $pink)
+  background-image: -o-linear-gradient(to right, $blue, $pink)
+
+#bottom
+  bottom: 0
+  position: fixed
+  padding: 3px
+  background-color: white
+  background-image: linear-gradient(to left, $blue, $pink)
+  background-image: -moz-linear-gradient(to left, $blue, $pink)
+  background-image: -webkit-linear-gradient(to left, $blue, $pink)
+  background-image: -o-linear-gradient(to left, $blue, $pink)  // border-top: 1px solid rgba(0,46,99,0.2)
+
+// BASE STYLES //
+body
+  line-height: 1
+  color: $blue
+  overflow-y: scroll
+  -webkit-overflow-scrolling: touch
+  font: 800 100% $main-font
+  background-color: rgb(240, 240, 240)
+
+h1
+  font: 800 4em $main-font
+  font-style: regular
+  line-height: 1.2em
+
+h2
+  font: 800 3.6em $main-font
+  text-align: left
+  line-height: 1em
+
+h3
+  font: 1.2em $main-font
+  font-style: italic
+  text-transform: uppercase
+
+h4
+  font: .8em $sub-font
+  text-transform: uppercase
+
+a
+  text-decoration: none
+  color: $pink
+  -webkit-transition: color .3s
+  -moz-transition: color .3s
+  -o-transition: color .3s
+  transition: color .3s
+
+a:hover
+  color: $gray
+
+#container
+  width: 100%
+  height: 100%
+  position: absolute
+
+#logo
+  width: 2.5em
+  height: auto
+  position: fixed
+  padding-top: 3em
+  padding-left: 3%
+  fill: $blue
+  animation: logofill 30s ease-in-out infinite
+
+/////// NAVIGATION ///////
+nav
+  position: fixed
+  z-index: 99
+  right: 5em
+  top: 3em
+  width: 100%
+  text-align: right
+
+nav ul li
+  display: inline-block
+  font: .6em $sub-font
+  font-weight: regular
+  letter-spacing: .2em
+  text-transform: uppercase
+  color: $blue
+  padding-left: 5em
+
+nav ul li > a
+  position: relative
+  color: $blue
+
+nav ul li > a:hover
+  color: white
+
+nav ul li > a:before
+  content: ""
+  position: absolute
+  width: 110%
+  height: 1.2em
+  left: -.3em
+  z-index: -1
+  visibility: hidden
+  background: linear-gradient(to right, ($pink), rgba(230, 44, 144, 0.5))
+  -webkit-transform: scaleX(0)
+  -ms-transform: scaleX(0)
+  transform: scaleX(0)
+  -webkit-transition: all .4s ease-in-out 0s
+  -o-transition: all .4s ease-in-out 0s
+  transition: all .4s ease-in-out 0s
+
+nav ul li > a:hover::before
+  visibility: visible
+  -webkit-transform: scaleX(1)
+  -ms-transform: scaleX(1)
+  transform: scaleX(1)
+
+.active
+  border-bottom: 1px solid $blue
+  transition: opacity .3s ease-in 0s
+
+/////// END OF NAV ///////
+
+/////// HERO SECTION / INTRO ///////
+section.main-section
+  height: 92vh
+  // background: linear-gradient(rgba(199, 199, 208, 1), rgba(194,194,206,0))
+
+div.intro
+  padding-top: 25%
+  padding-left: 11%
+  width: 50%
+  padding-bottom: .4em
+
+.line-divider
+  border-top: 1px solid rgba(0,46,99,0.3)
+  padding-top: .5em
+  width: 38%
+
+span.coordinates a
+  transition: color .5s
+  -webkit-transition: color .5s
+  -moz-transition: color .5s
+  -o-transition: color .5s
+
+
+span.coordinates a:hover
+  color: rgb(92, 92, 92)
+  text-decoration: none
+
+span.coordinates a:after
+  content: ""
+  opacity: 0
+  transition: opacity .5s
+  -webkit-transition: opacity .5s
+  -moz-transition: opacity .5s
+  -o-transition: opacity .5s
+
+span.coordinates a:hover:after
+  content: "*"
+  opacity: 1
+
+
+/////// END OF INTRO ///////
+
+/////// PROJECTS ///////
+section.projects
+  width: 100%
+  height: 100vh
+  position: relative
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+div.project-list
+  padding-top: 20%
+  text-align: center
+
+div.project-list-desc
+  padding-bottom: 1em
+
+
+.project-title
+  position: relative
+  color: $blue
+
+.project-title:hover
+  color: $blue
+  cursor: pointer
+
+.project-title:before
+  content: ""
+  position: absolute
+  width: 100%
+  height: 100%
+  // bottom: 15%
+  left: 0em
+  z-index: -1
+  visibility: hidden
+  background: linear-gradient(to right, ($pink), rgba(230, 44, 144, 0.5))
+  -webkit-transform: scaleX(0)
+  -ms-transform: scaleX(0)
+  transform: scaleX(0)
+  -webkit-transition: all .3s ease-in .1s
+  -o-transition: all .3s ease-in .1s
+  transition: all .3s ease-in .1s
+  -webkit-transform-origin: left center
+  -moz-transform-origin: left center
+  -ms-transform-origin: left center
+  -o-transform-origin: left center
+  transform-origin: left center
+
+.project-title:hover:before
+  visibility: visible
+  -webkit-transform: scaleX(1)
+  -ms-transform: scaleX(1)
+  transform: scaleX(1)
+
+.tooltip
+  position: relative
+  display: inline-block
+  height: 120%
+
+.tooltiptext
+  visibility: hidden
+  text-align: center
+  border-radius: 6px
+  position: relative
+  z-index: 1
+  transition: all .5s
+  -webkit-transition: all .5s
+  transform: translateY(-20px)
+  -webkit-transform: translateY(-20px)
+  opacity: 0
+
+.tooltip:hover + .tooltiptext
+  visibility: visible
+  transform: translateY(20px)
+  -webkit-transform: translateY(20px)
+  opacity: 1
+
+
+div.project-image
+  position: absolute
+  z-index: -2
+  opacity: .4
+  visibility: visible
+
+.project-image img
+  width: 100vw
+  height: 100vh
+  margin-top: -25%
+
+
+/////// END OF PROJECTS ///////
+
+/////// FOOTER ///////
+.footer
+  position: fixed
+  right: 5%
+  bottom: 5%
+
+.footer a i
+  font-size: 1.2em
+  padding-left: 2em
+  color: $blue
+  -webkit-transition: color .5s
+  -o-transition: color .5s
+  transition: color .5s
+
+.footer a i:hover
+  color: $pink
+
+
+// FADE IN ANIMATION ON VIEW
+.fade-in
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  opacity: 1
+
+.fade-in.ng-enter
+  opacity: 0
+  -webkit-transition: 1s
+  -o-transition: 1s
+  transition: 1s
+  -webkit-transition: all 1s ease
+  -o-transition: all 1s ease
+  transition: all 1s ease
+
+.fade-in.ng-leave
+  opacity: 1
+  -webkit-transition: all .5s ease
+  -o-transition: all .5s ease
+  transition: all .5s ease
+
+.fade-in.ng-enter-active
+  opacity: 1
+
+.fade-in.ng-leave-active
+  opacity: 0
+
+// END OF VIEW ANIMATION
+
+///// KEYFRAMES /////
+
+@-webkit-keyframes logofill
+  0%
+    opacity: 1
+    fill: linear-gradient($blue, $pink)
+
+  50%, 60%
+    opacity: 0
+    fill: $pink
+
+  100%
+    opacity: 1
+    fill: $blue
+
+@-o-keyframes logofill
+  0%
+    opacity: 1
+    fill: linear-gradient($blue, $pink)
+
+  50%, 60%
+    opacity: 0
+    fill: $pink
+
+  100%
+    opacity: 1
+    fill: $blue
+
+@-moz-keyframes logofill
+  0%
+    opacity: 1
+    fill: linear-gradient($blue, $pink)
+
+  50%, 60%
+    opacity: 0
+    fill: $pink
+
+  100%
+    opacity: 1
+    fill: $blue
+
+@keyframes logofill
+  0%
+    opacity: 1
+    fill: linear-gradient($blue, $pink)
+
+  50%, 60%
+    opacity: 0
+    fill: $pink
+
+  100%
+    opacity: 1
+    fill: $blue

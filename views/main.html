@@ -1,0 +1,20 @@
+<section class="main-section">
+  <div class="intro">
+    <h2 class="intro-text">I'm Jose Plata and I'm a Product Designer from Colombia, living and working in <span class="coordinates"><a href="">NYC</a></span></h2>
+    <br>
+    <div class="line-divider"></div>
+    <h4 class="intro-subtext">Shoot me an <span><a href="mailto:jose.a.plata@gmail.com">email</a></span> if you're interested in working together.</h4>
+  </div>
+</section>
+
+<section class="projects" ng-repeat="project in projects">
+  <div class="project-list">
+    <div class="project-list-desc">
+      <h1 class="tooltip"><a href="" class="project-title">{{project.name}}</a></h1>
+      <h3 class="project-subtitle tooltiptext">{{project.role}}</h3>
+    </div>
+    <div class="project-image">
+      <img ng-src="{{project.cover}}" alt="cover">
+    </div>
+  </div>
+</section>

@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Taviraj:400,400i,700i,800');
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  /*overflow-x: hidden;
+  overflow: auto;
+  scroll-snap-points-y: repeat(100%);
+  scroll-snap-type: mandatory;
+  scroll-snap-destination: 100% 0%;*/
+  /*background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255,255,255,0)) ;*/
+}
+
+/*BORDERS*/
+#top, #bottom, #left, #right {
+	background: rgb(255,255,255);
+	position: fixed;
+  z-index: 999;
+}
+#left, #right {
+	top: 0;
+  bottom: 0;
+	width: 10px;
+}
+#left {
+  left: 0;
+}
+#right {
+  right: 0;
+}
+#top, #bottom {
+	left: 0;
+  right: 0;
+	height: 10px;
+}
+#top {
+  top: 0;
+}
+#bottom {
+  bottom: 0;
+}
+/*END OF BORDERS*/
+
+#logo-icon {
+  position: fixed;
+  left: 2%;
+  top: 3%;
+  z-index: 99;
+  width: 7%;
+  height: 7%;
+  fill: #2020202;
+  animation: logofill 40s ease-in-out infinite;
+}
+
+@-webkit-keyframes logofill {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes logofill {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes logofill {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@keyframes logofill {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+h1 {
+  font: italic 5em "Taviraj", serif;
+  font-weight: 400;
+  line-height: .3em;
+  color: #202020;
+}
+
+h2 {
+  font: italic 400 2.3em "Cormorant Garamond", serif;
+  color: #777;
+}
+
+h3 {
+  font: 400 1em "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #999;
+}
+
+h4 {
+  font: 400 1.5em "Cormorant Garamond", serif;
+  color: #777;
+}
+
+a {
+  text-decoration: none;
+  color: #202020;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: 3s;
+  -o-transition: 3s;
+  transition: .3s;
+}
+
+ul {
+  list-style: none;
+}
+
+a:hover {
+  color: #777;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  z-index: 99;
+  right: 5em;
+  top: 3em;
+  width: 100%;
+  text-align: right;
+}
+
+nav ul li{
+  display: inline-block;
+  font: 400 1.2em "Montserrat", sans-serif;
+  padding-left: 3em;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+nav ul li > a {
+  position: relative;
+  color: #202020;
+  text-decoration: none;
+  padding: .5em;
+  /*padding-bottom: .5em;*/
+}
+
+nav ul li > a:hover {
+  color: #fff;
+}
+
+nav ul li > a:before {
+  content: " ";
+  position: absolute;
+  width: 110%;
+  height: 1.3em;
+  bottom: .4em;
+  left: -0.3em;
+  z-index: -1;
+  visibility: hidden;
+  background: linear-gradient(to right, #ff004d, #d42454);
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+nav ul li > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* ACTIVE LINK STYLING */
+.active {
+  border-bottom: 1px solid #202020;
+}
+
+
+/* MAIN PAGE HERO */
+#intro {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(255,255,255,.3), rgba(255,255,255,0));
+}
+
+.hero {
+  text-align: left;
+  width: 100vw;
+  height: 100%;
+  margin: 0vh auto;
+  padding-left: 10vh;
+  padding-top: 10%;
+}
+
+.hero .title {
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero h1.subtitle {
+  width: 80%;
+  color: #ff004d;
+  font-size: 6em;
+  line-height: 1em;
+}
+
+.main-image {
+  position: absolute;;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  /*bottom: 5%;*/
+  z-index: -5;
+  opacity: 0.5;
+}
+
+/*PROJECT LIST*/
+#project-list {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.list-container {
+  padding-top: 10%;
+}
+
+h2.little-title {
+  font-family: "Montserrat";
+  font-size: 1em;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: .2em;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #ff004d;
+  padding-bottom: 1em;
+  /*border-bottom: 1px solid #ff004d;*/
+}
+
+/* PROJECT LIST - UNDERLINE ANIMATION */
+.big-titles {
+  position: relative;
+  text-align: center;
+}
+
+.big-titles:hover {
+  color: #202020;
+}
+
+.big-titles:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  bottom: 25%;
+  left: 0em;
+  z-index: -1;
+  visibility: hidden;;
+  background: linear-gradient(to right, rgba(255,0,77,1), rgba(205,20,92,1));
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all .3s ease-in .1s;
+  -o-transition: all .3s ease-in .1s;
+  transition: all .3s ease-in .1s;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.big-titles:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.cover-image {
+  visibility: hidden;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  position: fixed;
+  display: inline-block;
+  z-index: -1;
+  width: 50%;
+  margin-left: 19vw;
+  -webkit-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -ms-transform-origin: top center;
+  -o-transform-origin: top center;
+  transform-origin: top center;
+}
+
+/*FADE IN VIEW ANIMATION*/
+.fade-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 1;
+}
+
+.fade-in.ng-enter {
+  opacity: 0;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.fade-in.ng-leave {
+  opacity: 1;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.fade-in.ng-enter-active {
+  opacity: 1;
+}
+
+.fade-in.ng-leave-active {
+  opacity: 0;
+}
+
+/* FOOTER */
+.footer {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+}
+
+.footer a i {
+  font-size: 2em;
+  padding-left: 2em;
+  color: #202020;
+  -webkit-transition: color .5s;
+  -o-transition: color .5s;
+  transition: color .5s;
+}
+
+.footer a i:hover {
+  color: #ff004d;
+}
